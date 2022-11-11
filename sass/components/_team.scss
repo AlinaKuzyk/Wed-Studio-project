@@ -2,13 +2,28 @@
    background-color: var(--secondary-bg-color);
 }
 
+.team__title {
+   @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+   }
+}
+
 .workers-list {
-   display: flex;
+   @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
 }
 
 .workers-list__item {
-   width: 270px;
-   margin-right: 30px;
+   width: 450px;
+
+   &:not(:last-child) {
+      margin-bottom: 30px;
+   }
 
    background-color: var(--primary-bg-color);
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
@@ -16,8 +31,16 @@
    0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 0px 0px 4px 4px;
 
-   &:last-child {
-      margin-right: 0;
+   @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 30px) / 2);
+      &:not(:last-child) {
+         margin-bottom: 0px;
+      }
+   }
+
+   @media screen and (min-width: $desktop) {
+      width: 270px;
+      flex-basis: calc((100% - 3 * 30px) / 4);
    }
 }
 
@@ -49,9 +72,13 @@
 }
 
 .chain-list {
-   margin-bottom: 30px;
-   margin-right: 32px;
-   margin-left: 32px;
+    padding-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 30px;
+    }
 }
 
 .chain-list__item {

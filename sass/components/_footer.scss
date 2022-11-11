@@ -2,17 +2,22 @@
    background-color: var(--bg-color-hero-footer);
 }
 
-.page-footer__wrapper {
-   display: flex;
-   align-items: baseline;
-
-   padding-top: 60px;
-   padding-bottom: 60px;
+.footer-box {
+   outline: 2px solid tomato;
+   @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+   }
 }
 
 .footer-navigation__link {
    display: block;
    margin-bottom: 20px;
+   @media screen and (min-width: $desktop) {
+      font-size: 26px;
+      line-height: 1.19;
+   }
 }
 
 .navigation__logo--white {
@@ -20,9 +25,19 @@
 }
 
 .adr-list__item {
+   & .adr-list__item--address {
+      margin-bottom: 5px;
+   }
+
+   & .adr-list__item--mail {
+      margin-bottom: 8px;
+   }
+
+   @media screen and (min-width: $desktop) {
    margin-bottom: 9px;
-   &:last-child {
+      &:last-child {
       margin-bottom: 0;
+   }
    }
 }
 
@@ -112,8 +127,10 @@
 }
 
 .submit-form__input {
-   width: 358px;
+   width: 450px;
    height: 50px;
+
+   margin-bottom: 20px;
 
    border-color: rgba(255, 255, 255, 0.3);
    background-color: var(--bg-color-hero-footer);
@@ -130,7 +147,9 @@
    position: relative;
    display: flex;
    align-items: center;
-   margin-left: 12px;
+   
+   margin-right: auto;
+   margin-left: auto;
 
    width: 200px;
    height: 50px;

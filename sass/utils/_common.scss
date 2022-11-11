@@ -64,9 +64,6 @@ body {
 
    @media screen and (min-width: $desktop) {
       width: $desktop;
-
-      padding-right: 215px;
-      padding-left: 215px;
    }
 }
 
@@ -100,12 +97,12 @@ body {
 // Для заголовків
 
 .title {
-   margin-bottom: 50px;
+   margin-bottom: 30px;
 
    color: var(--primary-title-color);
    font-weight: 700;
-   font-size: 36px;
-   line-height: 1.17;
+   font-size: 28px;
+   line-height: 1.18;
    text-align: center;
    letter-spacing: 0.03em;
 }
