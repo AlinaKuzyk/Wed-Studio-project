@@ -10,7 +10,7 @@
 </head>
 <body>
    <!-- шапка страницы -->
-<!-- <header class="page__header">
+<header class="page__header">
     <div class="container main-nav">     
          <nav class="navigation">
             <a class="logo navigation__logo" href="./index.html" title="Logo WebStudio">Web
@@ -46,26 +46,61 @@
                </a>
             </li>
          </ul>  
+         <button class="button-burger js-open-menu" type="button">
+            <svg class="button-burger__icon" width="40" height="40">
+               <use href="./images/icons.svg#icon-icon_burger"></use>
+            </svg>
+         </button>
+
+         <div class="mobile-menu js-menu-container">
+            <button class="mobile-menu__button js-close-menu">
+               <svg class="mobile-menu__button--icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-close_btn"></use>
+               </svg>
+            </button>
+
+            <div class="menu-pages">
+               <ul class="menu-pages__list">
+                  <li class="menu-pages__item"><a class="menu-pages__link" href="#" target="_blank" title="Студія">Студія</a></li>
+                  <li class="menu-pages__item"><a class="menu-pages__link" href="#" target="_blank" title="Портфоліо">Портфоліо</a></li>
+                  <li class="menu-pages__item"><a class="menu-pages__link" href="#" target="_blank" title="Контакти">Контакти</a></li>
+               </ul>
+
+               <div class="menu-wrapper">
+                  <ul class="menu-contacts__list">
+                     <li class="menu-contacts__item"><a class="menu-contacts__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                     <li class="menu-contacts__item"><a class="menu-contacts__link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                  </ul>
+   
+                  <ul class="menu-social__list">
+                     <li class="menu-social__item"><a class="menu-social__link" href="#" aria-label="Instagram" target="_blank">Instagram</a></li>
+                     <li class="menu-social__item"><a class="menu-social__link" href="#" aria-label="Twitter" target="_blank">Twitter</a></li>
+                     <li class="menu-social__item"><a class="menu-social__link" href="#" aria-label="Facebook" target="_blank">Facebook</a></li>
+                     <li class="menu-social__item"><a class="menu-social__link" href="#" aria-label="LinkedIn" target="_blank">LinkedIn</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
     </div>
-</header> -->
+</header>
 
    <main>
       <!-- Герой -->
-      <!-- <section class="hero">
-         <div class="container hero__wrapper">
-               <div class="container hero__container">
-                  <h1 class="hero-title">
+      <section class="hero">
+         <div class="container hero-wrapper">
+               <div class="hero-container">
+                  <h1 class="hero-container__title">
                      Ефективні рішення для вашого бізнесу
                   </h1>
                   <button class="button hero__button" type="button" data-modal-open>Замовити послугу
                   </button>
                </div>
          </div>
-      </section> -->
+      </section>
 
       <!-- Особливості -->
 
-         <!-- <section class="section section-feature">
+         <section class="section section-feature">
             <div class="container feature">
                <h2 class="hidden">Особливості</h2>
                <ul class="features-list">
@@ -95,10 +130,10 @@
                   </li>
               </ul>
             </div>
-         </section> -->
+         </section>
    
       <!-- Чим ми займаємося -->
-      <!-- <section class="section work">
+      <section class="section work">
         <div class="container">
            <h2 class="title work__title">Чим ми займаємося</h2>
            <ul class="work__list">
@@ -128,10 +163,10 @@
              </li>
            </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Наша команда -->   
-      <!-- <section class="section team">
+      <section class="section team">
          <div class="container">
             <h2 class="title team__title">
                Наша команда
@@ -453,10 +488,10 @@
                </ul>
             </div>
          </div>
-      </section> -->
+      </section>
 
       <!-- Наші партнери -->
-      <!-- <section class="section">
+      <section class="section">
          <div class="container partners">
             <h2 class="title partners__title">Постійні клієнти</h2>
             <ul class="partners-list">
@@ -504,7 +539,7 @@
                </li>
             </ul>
          </div>
-      </section> -->
+      </section>
 
       </main>
 
@@ -590,7 +625,7 @@
       </footer>
 
       <!-- Модальне вікно -->
-   <!-- <div class="backdrop is-hidden" data-modal>
+   <div class="backdrop is-hidden" data-modal>
       <div class="modal">
          <div class="modal-body">
             <button class="modal-body__btn" type="button" data-modal-close>
@@ -655,9 +690,10 @@
             </form>         
          </div>
       </div>
-   </div> -->
+   </div>
 
-   <!-- <script src="./js/modal.js"></script> -->
+   <script src="./js/modal.js"></script>
+   <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
 

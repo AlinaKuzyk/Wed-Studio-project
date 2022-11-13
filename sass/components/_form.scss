@@ -69,10 +69,15 @@
 
    margin-bottom: 30px;
 
-   font-size: 14px;
-   line-height: 1.71;
+   font-size: 12px;
+   line-height: 1.17;
    letter-spacing: 0.03em;
    color: var(--text-paragraph-color);
+
+   @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+   }
 }
 
 .check-label__input {
@@ -112,10 +117,15 @@
 .check-label__link {
    padding-left: 5px;
 
-   font-size: 14px;
-   line-height: 1.71;
+   font-size: 12px;
+   line-height: 1.17;
    letter-spacing: 0.03em;
    color: var(--accent-color);
+
+   @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+   }
 }
 
 .form-button {

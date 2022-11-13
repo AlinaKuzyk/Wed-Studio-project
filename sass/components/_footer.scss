@@ -1,13 +1,40 @@
 .page-footer {
    background-color: var(--bg-color-hero-footer);
+   @media screen and (min-width: $desktop) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+}
+
+.page-footer__wrapper {
+   @media screen and (min-width: $desktop) {
+      display: flex;
+   }
 }
 
 .footer-box {
-   outline: 2px solid tomato;
-   @media screen and (min-width: $tablet) {
+   @media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
+    margin-bottom: 60px;
+    text-align: center;
+   }
+
+   @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: baseline;
+   }
+}
+
+.footer-navigation {
+   @media screen and (max-width: $pre-tablet) {
+      text-align: center;
+      margin-bottom: 60px;
+   }
+
+   @media screen and (min-width: $desktop) {
+      margin-right: 70px;
    }
 }
 
@@ -25,21 +52,27 @@
 }
 
 .adr-list__item {
-   & .adr-list__item--address {
-      margin-bottom: 5px;
-   }
-
-   & .adr-list__item--mail {
+   &:not(:last-child) {
       margin-bottom: 8px;
    }
 
-   @media screen and (min-width: $desktop) {
-   margin-bottom: 9px;
+   @media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
+      margin-bottom: 8px;
+
       &:last-child {
-      margin-bottom: 0;
+        margin-bottom: 0;
+      }
    }
+   
+
+   @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+      &:last-child {
+        margin-bottom: 0;
+      }
    }
 }
+
 
 .adr-list__link {
    color: var(--hero-title-color);
@@ -74,7 +107,14 @@
 }
 
 .join {
-   margin-left: 70px;
+   @media screen and (max-width: $pre-tablet) {
+      text-align: center;
+      margin-bottom: 60px;
+   }
+
+   @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+   }
 }
 
 .join__title{
@@ -117,13 +157,20 @@
 }
 
 .follow {
-   margin-left: 93px;
+   @media screen and (max-width: $pre-desctop) {
+      text-align: center;
+   }
+
+   @media screen and (min-width: $desktop) {
+      align-items: baseline;
+      margin-top: 12px;
+   }
 }
 
 .submit {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   @media screen and (min-width: $desktop) {
+      display: flex;
+   }
 }
 
 .submit-form__input {
@@ -135,6 +182,11 @@
    border-color: rgba(255, 255, 255, 0.3);
    background-color: var(--bg-color-hero-footer);
    color: var(--hero-title-color);
+
+   @media screen and (min-width: $desktop) {
+      width: 358px;
+      margin-right: 12px;
+   }
 }
 
 .submit-form__input::placeholder {
