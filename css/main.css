@@ -1047,6 +1047,11 @@ body {
   color: var(--accent-color);
 }
 
+.adr-list__link--map {
+  width: 640px;
+  height: 480px;
+}
+
 .adr-list__link--contact {
   color: var(--link-auth-low-color);
   text-decoration: none;
@@ -1134,7 +1139,7 @@ body {
 }
 
 .submit-form__input {
-  width: 450px;
+  width: 380px;
   height: 50px;
   margin-bottom: 20px;
   border-color: rgba(255, 255, 255, 0.3);
