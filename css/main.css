@@ -216,12 +216,6 @@ body {
   margin-right: 50px;
 }
 
-.site-nav {
-  -webkit-transition: color var(--animation);
-  -o-transition: color var(--animation);
-  transition: color var(--animation);
-}
-
 .site-nav__link,
 .site-auth__link {
   padding-top: 32px;
@@ -232,6 +226,9 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  -webkit-transition: color var(--animation);
+  -o-transition: color var(--animation);
+  transition: color var(--animation);
 }
 
 .site-nav__item .site-nav__link:hover,
@@ -242,9 +239,6 @@ body {
 .site-nav__link--current {
   position: relative;
   color: var(--accent-color);
-  -webkit-transition: color var(--animation);
-  -o-transition: color var(--animation);
-  transition: color var(--animation);
 }
 
 .site-nav__link--current::after {
@@ -411,13 +405,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 767px;
-  width: 100%;
-  height: 100%;
+  max-width: 767px;
+  height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
+  padding: 48px 40px;
 }
 
 .menu-pages__item:not(:last-child) {
@@ -435,6 +427,10 @@ body {
   -webkit-transition: color var(--animation);
   -o-transition: color var(--animation);
   transition: color var(--animation);
+}
+
+.menu-pages__item .menu-pages__link--current {
+  color: var(--accent-color);
 }
 
 .menu-pages__link, .menu-contacts__link, .menu-social__link {
@@ -464,10 +460,17 @@ body {
   transition: color var(--animation);
 }
 
+.menu-contacts__link--current {
+  font-size: 34px;
+  color: var(--accent-color);
+}
+
 .menu-social__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .menu-social__list .menu-social__item:not(:last-child) {
   padding-right: 10px;
@@ -534,7 +537,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 600px;
-    min-width: 1200px;
+    max-width: 1600px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -634,29 +637,20 @@ body {
   }
 }
 
-.feature-list__item::before {
-  display: block;
-  margin-bottom: 30px;
-  content: "";
+.svg-wrapper {
+  position: relative;
+  max-width: 450px;
   height: 120px;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  background-position: center;
+  margin-bottom: 30px;
   background-color: rgb(245, 244, 250);
-  border-radius: 4px;
 }
-
-.feature-list__item:nth-child(1)::before {
-  background-image: url(../images/antena.svg);
-}
-.feature-list__item:nth-child(2)::before {
-  background-image: url(../images/clock\ 1\ 14.25.44.svg);
-}
-.feature-list__item:nth-child(3)::before {
-  background-image: url(../images/computer.svg);
-}
-.feature-list__item:nth-child(4)::before {
-  background-image: url(../images/astronaut\ 1-2.svg);
+.svg-wrapper .svg-wrapper__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .feature-list__title {
@@ -1138,8 +1132,13 @@ body {
   }
 }
 
+.submit-form {
+  width: 100%;
+}
+
 .submit-form__input {
-  width: 380px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   margin-bottom: 20px;
   border-color: rgba(255, 255, 255, 0.3);

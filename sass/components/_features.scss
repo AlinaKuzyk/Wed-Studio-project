@@ -25,31 +25,19 @@
    }
 }
 
-.feature-list__item::before {
-   display: block;
-   margin-bottom: 30px;
-
-   content: "";
+.svg-wrapper {
+   position: relative;
+   max-width: 450px;
    height: 120px;
-   background-repeat: no-repeat;
-   background-size: 70px;
-   background-position: center;
+   margin-bottom: 30px;
    background-color: rgba(245, 244, 250, 1);
-   border-radius: 4px;
-}
 
-.feature-list__item {
-   &:nth-child(1)::before {
-      background-image: url(../images/antena.svg);
-   }
-   &:nth-child(2)::before {
-      background-image: url(../images/clock\ 1\ 14.25.44.svg);
-   }
-   &:nth-child(3)::before {
-      background-image: url(../images/computer.svg);
-   }
-   &:nth-child(4)::before {
-      background-image: url(../images/astronaut\ 1-2.svg);
+   .svg-wrapper__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
    }
 }
 
